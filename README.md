@@ -82,3 +82,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * In those input fields, you should be able to edit and resubmit the content.  
 * You’re going to make heavy use of state and props
 * Create a components directory under your src directory and add your components.
+
+## Docs referred
+[thinking a react structure](https://legacy.reactjs.org/docs/thinking-in-react.html)
