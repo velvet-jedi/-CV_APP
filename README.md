@@ -79,6 +79,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * An edit and submit button for each section or for the whole CV. 
 * The submit button should submit your form and display the value of your input fields in HTML elements. 
 * The edit button should add back (display) the input fields, with the previously displayed information as values. 
-* In those input fields, you should be able to edit and resubmit the content. 
+* In those input fields, you should be able to edit and resubmit the content.  
 * You’re going to make heavy use of state and props
 * Create a components directory under your src directory and add your components.
