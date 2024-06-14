@@ -1,21 +1,21 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
+import "../styles/InputField.css";
 
-const InputField = ({id, value, labelText, placeholder, type}) => {
+const InputField = ({ id, value, labelText, placeholder, type, onChange }) => {
   return (
-    <div>
-        <label htmlFor={id}>
-            <span>{labelText}</span>
-        </label>
+    <div className="input-field">
+      <label htmlFor={id}>
+        <span className="label-text">{labelText}</span>
+      </label>
 
-        <input type={type} 
+      <input
+        type={type}
         id={id}
         placeholder={placeholder}
         value={value}
-        />
-
+        onChange={onChange}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default InputField
+export default InputField;

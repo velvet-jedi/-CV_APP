@@ -6,9 +6,11 @@ import PersonalDetails from "./Components/PII/PersonalDetails";
 function App() {
   return (
     <>
-      <div id="info_column">
-        <PersonalDetails></PersonalDetails>
-      </div>
+      
+        <PersonalDetails
+          
+        />
+      
     </>
   );
 }
