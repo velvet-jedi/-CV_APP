@@ -7,7 +7,7 @@ import '../../styles/EducationForm.css';
 const EducationForm = (props) => { // props object
 
     const {degree='', schoolName='', startDate='', endDate='', id=''} = props.form || {};
-    const {onChange, cancel, save, remove} = props; // destructuring top level props from props object
+    const {onChange, cancel, save, remove} = props; // destructuring top level props from props object for buttons
 
   return (
     <form className="education-form section-form"
