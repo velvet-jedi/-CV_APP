@@ -1,13 +1,16 @@
-import React from 'react'
+
+import "./styles/App.css";
+import PersonalDetails from "./Components/PII/PersonalDetails";
+
 
 function App() {
-  
-
   return (
     <>
-      <p>Hello</p>
+      <div id="info_column">
+        <PersonalDetails></PersonalDetails>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
