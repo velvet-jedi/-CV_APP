@@ -15,6 +15,7 @@ const PersonalDetails = ({ fullName, email, phoneNumber, onChange }) => {
           onChange={onChange} // probably defined in app.js
         />
 
+
         <InputField
           type="email"
           id="email"
