@@ -14,3 +14,6 @@
 
 - Save and download pdf button for the whole CV.
 - Use of state and props
+
+- PROPS -> Default values to avoid destructuring from undefined
+- Reuse Reuse Reuse to stay DRY SUPERDRY

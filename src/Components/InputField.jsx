@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../styles/InputField.css";
 
 const InputField = ({ id, value, labelText, placeholder, type, onChange }) => {
