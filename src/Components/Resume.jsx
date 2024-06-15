@@ -10,7 +10,7 @@ import ExperienceInfoSection from "./Experience/ExperienceInfoSection"
 const Resume = ({ personalInfo, sections }) => {
   return (
     <div className="resume-container">
-        <h1>Rseume</h1>
+        
         <PersonalInfoSection  
             fullName={personalInfo.fullName}
             email={personalInfo.email}

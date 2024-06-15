@@ -4,14 +4,18 @@
 const DisplaySection = ({ array, InfoComponent, title }) => {
   return (
     <>
-        <h3 className='header-text'>{title}</h3>
-        {array.map(
-            (info) => 
-                <InfoComponent 
-                    info={info}
-                    key={info.id}
-                />
-        )}
+      {array && (
+        <div>
+          <h3 className='header-text'>{title}</h3>
+          {array.map(
+              (info) =>
+                  <InfoComponent
+                      info={info}
+                      key={info.id}
+                  />
+          )}
+        </div>
+      )}
     </>
   )
 }
