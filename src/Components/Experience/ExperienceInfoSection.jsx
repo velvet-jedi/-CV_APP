@@ -3,7 +3,7 @@ import DisplaySection from "../DisplaySection";
 import ExperienceInfo from "./ExperienceInfo";
 
 
-const ExperienceInfoSection = ({ experiences }) => {
+const ExperienceInfoSection = ({ experiences=[] }) => {
   return (
     <div className="experience-info-section resume-section">
         <DisplaySection 

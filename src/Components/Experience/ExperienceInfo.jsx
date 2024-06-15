@@ -1,4 +1,6 @@
+
 /* eslint-disable react/prop-types */
+// child component for displaying individual experience info in the experience section of the resume
 // import "../../styles/ExperienceInfo.css";
 
 const ExperienceInfo = ({ info }) => {

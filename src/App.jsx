@@ -20,7 +20,7 @@ function App() {
             <PersonalDetails />
           </div>
         </div>
-
+      
 
         <Resume 
             personalInfo={personalInfo}
