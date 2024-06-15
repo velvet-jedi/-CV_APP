@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */ 
-import '../../styles/ExperienceForm.css';
+
 import Buttons from "../Buttons";
 import InputField from "../InputField"
 
 const ExperienceForm = (props) => {
 
-    const {companyName='', position='', startDate='', endDate='', description='', id=''} = props.form || {};
+    const {companyName='', position='', startDate='', endDate='', id=''} = props.form || {};
     const { onChange, save, remove, cancel } = props; // for buttons
 
   return (

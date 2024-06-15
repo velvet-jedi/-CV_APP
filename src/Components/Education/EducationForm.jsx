@@ -2,7 +2,7 @@
 
 import InputField from '../InputField';
 import Buttons from '../Buttons';
-import '../../styles/EducationForm.css';
+
 
 const EducationForm = (props) => { // props object
 

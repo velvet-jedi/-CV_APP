@@ -1,25 +1,34 @@
 
 import "./styles/App.css";
+import { useState } from "react";
 import PersonalDetails from "./Components/PII/PersonalDetails";
-import EducationForm from "./Components/Education/EducationForm";
-import ExperienceForm from "./Components/Experience/ExperienceForm";
+import Resume from "./Components/Resume";
+
 
 
 function App() {
+
+  const [personalInfo, setPersonalInfo] = useState('');
+  const [sections, setSections] = useState('');
+
   return (
     <>
       
-        <PersonalDetails
-          
-        />
-        
-        <EducationForm
-          
-        />
-        
-        <ExperienceForm
-        
-        />
+      <div className="app">
+        <div className="edit-side">
+          <div className="form-container">
+            <PersonalDetails />
+          </div>
+        </div>
+
+
+        <Resume 
+            personalInfo={personalInfo}
+            sections={sections}
+        />  
+
+
+      </div>
       
     </>
   );

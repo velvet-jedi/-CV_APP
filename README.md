@@ -17,3 +17,4 @@
 
 - PROPS -> Default values to avoid destructuring from undefined
 - Reuse Reuse Reuse to stay DRY SUPERDRY
+- conditional rendering
