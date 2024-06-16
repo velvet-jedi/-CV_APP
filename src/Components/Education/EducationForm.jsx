@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+// represents a single education entry with fields for schoolName, degree, startDate, and endDate.
 
 import InputField from '../InputField';
 import Buttons from '../Buttons';
@@ -8,6 +9,8 @@ const EducationForm = (props) => { // props object
 
     const {degree='', schoolName='', startDate='', endDate='', id=''} = props.form;
     const {onChange, cancel, save, remove} = props; // destructuring top level props from props object for buttons
+
+    // onChange prop is used as the event handler for the input fields, which will be the handleSectionChange function
 
   return (
     <form className="education-form section-form"

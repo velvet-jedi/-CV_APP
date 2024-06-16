@@ -54,8 +54,24 @@ function App() {
 
   }
 
+  //  identify which form, fields user is interacting with, update the state when a user modifies an input field in the education or experience sections, resulting in rerender 
   function handleSectionChange(e){
-    
+    const { key } = e.target.dataset; // Extracts the specific field being edited (e.g., "schoolName") 'data-key' from EducationForm input field
+    const inputValue = e.target.value; // Gets the new value entered by the user
+    const form = e.target.closest(".section-form") // // Finds the closest <form> element with class section-form with the input field that triggered the event)
+    const { id } = form; // 
+    const { arrayName } = form.dataset;    // 
+
+    // const section = sections[arrayName];
+    // setSections({
+    //   ...sections,
+    //   [arrayName]: section.map((obj) => { // map over sections array
+    //     if (obj.id === id) obj[key] = inputValue;
+    //     return obj;
+    //   }),
+    // });
+
+
   }
 
   return (
@@ -77,10 +93,10 @@ function App() {
           educations={sections.educations}
           isOpen={sectionOpen === "Education"}
           onChange={handleSectionChange}
-          createForm={createEducationForm}
-          setOpen={setOpen}
-          onCancel={cancelForm}
-          onRemove={removeForm}
+          // createForm={createEducationForm}
+          // setOpen={setOpen}
+          // onCancel={cancelForm}
+          // onRemove={removeForm}
   />
 
         <Resume 

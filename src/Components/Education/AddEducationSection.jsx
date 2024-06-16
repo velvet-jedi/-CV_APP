@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+// This component manages the list of education forms, see DisplayForms
+
 import CreateForm from "../CreateForm"
 import DisplayForms from "../DisplayForms"
 import EducationForm from "./EducationForm"
@@ -27,9 +29,10 @@ const AddEducationSection = ({
         />
 
         <div className={`section-content ${isOpen ? "open" : ""}`}>
-            <DisplayForms 
+            <DisplayForms    //to render a list of EducationForm components. ???
                 forms={educations}
                 onChange={onChange}
+                // onChange prop is passed down to each EducationForm, which is the handleSectionChange function in App.jsx
                 onCancel={onCancel}
                 onRemove={onRemove}
                 FormComponent={EducationForm} // this will provide the input fields for the form

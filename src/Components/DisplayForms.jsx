@@ -5,8 +5,8 @@ const DisplayForms = ({ forms, onChange, onCancel, onRemove, FormComponent, arra
     <div className="forms-container">
         {forms.map((form) => 
             <FormComponent 
-                form={form}
-                key={form.id}
+                form={form} // form object example, EducationForm
+                key={form.id} // example, 
                 onChange={onChange}
                 cancel={onCancel}
                 remove={onRemove}
