@@ -6,7 +6,7 @@ import Buttons from '../Buttons';
 
 const EducationForm = (props) => { // props object
 
-    const {degree='', schoolName='', startDate='', endDate='', id=''} = props.form || {};
+    const {degree='', schoolName='', startDate='', endDate='', id=''} = props.form;
     const {onChange, cancel, save, remove} = props; // destructuring top level props from props object for buttons
 
   return (
@@ -17,12 +17,12 @@ const EducationForm = (props) => { // props object
     >
       <InputField
         type="text"
-        id="school-name"
+        id="school-name" 
         labelText="School"
         placeholder="Enter your school / university"
         onChange={onChange}
-        value={schoolName}
-        data-key="schoolName"
+        value={schoolName} // used in handleSectionChange to destructure 'value' from the dataset object
+        data-key="schoolName" // used in handleSectionChange to destructure 'key' from the dataset object
       />
 
       <InputField
@@ -35,25 +35,26 @@ const EducationForm = (props) => { // props object
         data-key="degree"
       />
 
-      <InputField
-        type="date"
-        id="date"
-        labelText="Start Date"
-        placeholder="Enter start date"
-        value={startDate}
-        onChange={onChange}
-        data-key="startDate"
-      />
-
-      <InputField
-        type="date"
-        id="date"
-        labelText="End Date"
-        placeholder="Enter end date"
-        value={endDate}
-        onChange={onChange}
-        data-key="endDate"
-      />
+      <div className="dates-group">
+        <InputField
+          type="date"
+          id="date"
+          labelText="Start Date"
+          placeholder="Enter start date"
+          value={startDate}
+          onChange={onChange}
+          data-key="startDate"
+        />
+        <InputField
+          type="date"
+          id="date"
+          labelText="End Date"
+          placeholder="Enter end date"
+          value={endDate}
+          onChange={onChange}
+          data-key="endDate"
+        />
+      </div>
 
     <Buttons save={save} remove={remove} cancle={cancel}></Buttons>
     </form>
