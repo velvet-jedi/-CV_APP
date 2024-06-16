@@ -23,7 +23,7 @@ const AddEducationSection = ({
             isOpen={isOpen}
             setOpen={setOpen}
             sectionName='Education'
-            iconName='FaGraduationCap'
+            IconName='FaGraduationCap'
         />
 
         <div className={`section-content ${isOpen ? "open" : ""}`}>
@@ -32,7 +32,7 @@ const AddEducationSection = ({
                 onChange={onChange}
                 onCancel={onCancel}
                 onRemove={onRemove}
-                FormComponent={EducationForm}
+                FormComponent={EducationForm} // this will provide the input fields for the form
                 arrayName="educations"
                 titleKey="schoolName"
             />
