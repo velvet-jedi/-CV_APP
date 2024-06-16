@@ -3,7 +3,7 @@
 
 import { FaChevronUp } from "react-icons/fa";
 
-const ExpandSection = ({ isOpen, setOpen, sectionName, IconName }) => {
+const ExpandSection = ({ isOpen, setOpen, sectionName, IconName}) => {
   return (
     <button className="expand-section" onClick={() => setOpen()}>
       <h2 className="expand-section-header">

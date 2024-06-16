@@ -14,6 +14,7 @@ const PersonalDetails = ({ fullName, email, phoneNumber, onChange }) => {
           placeholder="Enter your full name"
           value={fullName} //whatever the user enters
           onChange={onChange} // probably defined in app.js
+          data-key="fullName" // set the data-key prop to the key that should be updated in the state when the input field's value changes.
         />
 
 
@@ -24,6 +25,7 @@ const PersonalDetails = ({ fullName, email, phoneNumber, onChange }) => {
           placeholder="Enter your email address"
           value={email} //whatever the user enters
           onChange={onChange} // probably defined in app.js
+          data-key="email"
         />
 
         <InputField
@@ -33,6 +35,7 @@ const PersonalDetails = ({ fullName, email, phoneNumber, onChange }) => {
           placeholder="Enter phone number"
           value={phoneNumber} //whatever the user enters
           onChange={onChange} // probably defined in app.js
+          data-key="phoneNumber"
         />
       </form>
     </>
