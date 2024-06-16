@@ -12,6 +12,7 @@ const EducationForm = (props) => { // props object
   return (
     <form className="education-form section-form"
         id={id}
+        data-array-name="educations"
       onSubmit={(e) => e.preventDefault()}
     >
       <InputField
@@ -21,6 +22,7 @@ const EducationForm = (props) => { // props object
         placeholder="Enter your school / university"
         onChange={onChange}
         value={schoolName}
+        data-key="schoolName"
       />
 
       <InputField
@@ -30,6 +32,7 @@ const EducationForm = (props) => { // props object
         placeholder="Enter your study title"
         value={degree}
         onChange={onChange}
+        data-key="degree"
       />
 
       <InputField
@@ -39,6 +42,7 @@ const EducationForm = (props) => { // props object
         placeholder="Enter start date"
         value={startDate}
         onChange={onChange}
+        data-key="startDate"
       />
 
       <InputField
@@ -48,6 +52,7 @@ const EducationForm = (props) => { // props object
         placeholder="Enter end date"
         value={endDate}
         onChange={onChange}
+        data-key="endDate"
       />
 
     <Buttons save={save} remove={remove} cancle={cancel}></Buttons>

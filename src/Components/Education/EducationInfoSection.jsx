@@ -4,7 +4,7 @@ import DisplaySection from "../DisplaySection";
 
 
 
-const EducationInfoSection = ({ educations=[] }) => {
+const EducationInfoSection = ({ educations}) => {
   return (
     <div className="education-info-section resume-section">
         <DisplaySection
