@@ -15,7 +15,35 @@ function App() {
     phoneNumber: "",
     address: "",
   });
-  const [sections, setSections] = useState('');
+  const [sections, setSections] = useState({
+    educations: [
+      {
+        degree: "",
+        schoolName: "",
+        location: "",
+        startDate: "",
+        endDate: "",
+        
+        // isHidden: true,
+        // id: uniqid(),
+      },
+    ],
+
+    experiences: [
+      {
+        companyName: "",
+        positionTitle: "",
+        location: "",
+        description:"",
+        startDate: "",
+        endDate: "",
+        
+        // isHidden: false,
+        // id: uniqid(),
+      
+      }
+    ]
+  });
   const [sectionOpen, setSectionOpen] = useState(null);
 
 //   user edits their PII in a form field,
@@ -24,6 +52,10 @@ function App() {
     const { key } = e.target.dataset; // extract the data-key property from the dataset object of the target element (the input field that was changed). This key likely corresponds to the specific piece of personal information being edited (e.g., "fullName", "email", etc.).
     setPersonalInfo({ ...personalInfo, [key]: e.target.value });
 
+  }
+
+  function handleSectionChange(e){
+    
   }
 
   return (
@@ -41,15 +73,15 @@ function App() {
           </div>
         </div>
 
-        {/* <AddEducationSection 
+        <AddEducationSection 
           educations={sections.educations}
-          isOpen={sectionOpen === "education"}
-          // onChange={handleSectionChange}
-          // createForm={createEducationGorm}
-          // setOpen={setOpen}
-          // onCancel={cancelForm}
-          // onRemove={removeForm}
-  /> */}
+          isOpen={sectionOpen === "Education"}
+          onChange={handleSectionChange}
+          createForm={createEducationForm}
+          setOpen={setOpen}
+          onCancel={cancelForm}
+          onRemove={removeForm}
+  />
 
         <Resume 
             personalInfo={personalInfo}

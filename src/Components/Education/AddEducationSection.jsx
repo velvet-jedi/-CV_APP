@@ -30,9 +30,11 @@ const AddEducationSection = ({
             <DisplayForms 
                 forms={educations}
                 onChange={onChange}
-                onCancle={onCancel}
+                onCancel={onCancel}
                 onRemove={onRemove}
                 FormComponent={EducationForm}
+                arrayName="educations"
+                titleKey="schoolName"
             />
         </div>
 
