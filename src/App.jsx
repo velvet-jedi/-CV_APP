@@ -44,6 +44,9 @@ function App() {
   });
   const [sectionOpen, setSectionOpen] = useState(null);
 
+  // Store prevState to revert changes when user clicks "cancel"
+  const [prevState, setPrevState] = useState(null);
+
   //   user edits their PII in a form field,
   // this function captures the change, updates the app's state to reflect the new info. The user's input is reflected throughout the app.
   function handlePersonalInfoChange(e) {
@@ -73,6 +76,14 @@ function App() {
   }
 
 
+  // add a new form object to appropriate section 
+  function createForm(arrayName, object){
+    const section = structuredClone(sections[arrayName]);
+    setPrevState(null);  // start as new form with no previous state
+    
+    section.push(object);
+    setSections({...sections, [arrayName] : section});
+  }
 
   // create a new form object
   const createEducationForm = () => {
