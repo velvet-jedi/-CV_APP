@@ -1,4 +1,4 @@
-// import '../styles/ExpandSection.css'
+import '../styles/ExpandSection.css'
 /* eslint-disable react/prop-types */
 
 import { FaChevronUp } from "react-icons/fa";

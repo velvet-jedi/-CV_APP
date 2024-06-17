@@ -6,8 +6,8 @@ import CreateForm from "../CreateForm"
 import DisplayForms from "../DisplayForms"
 import EducationForm from "./EducationForm"
 import ExpandSection from "../ExpandSection"
-// import "../../styles/Section.css"
-
+import "../../styles/Section.css"
+import { FaGraduationCap } from "react-icons/fa"; // Ensure correct import
 
 const AddEducationSection = ({
     educations,
@@ -25,7 +25,7 @@ const AddEducationSection = ({
             isOpen={isOpen}
             setOpen={setOpen}
             sectionName='Education'
-            IconName='FaGraduationCap'
+            IconName={FaGraduationCap}
         />
 
         <div className={`section-content ${isOpen ? "open" : ""}`}>
