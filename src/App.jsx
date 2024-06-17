@@ -96,6 +96,9 @@ function App() {
     });
   };
 
+  const setOpen = (sectionName) => setSectionOpen(sectionName);
+
+
   return (
     <>
       <div className="app">
@@ -115,7 +118,7 @@ function App() {
           isOpen={sectionOpen === "Education"}
           onChange={handleSectionChange}
           createForm={createEducationForm}
-          // setOpen={setOpen}
+          setOpen={setOpen}
           // onCancel={cancelForm}
           // onRemove={removeForm}
         />
