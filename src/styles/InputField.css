@@ -6,12 +6,24 @@
   flex-grow: 1;
 }
 
-.input-field input {
+.input-field textarea {
+  max-width: 100%;
+  min-height: 42px;
+  height: 65px;
+}
+
+.input-field input,
+.input-field textarea {
   border: 2px solid transparent;
   background-color: var(--main-bg-color);
   padding: 10px;
   border-radius: 12px;
   transition: border 0.15s, box-shadow 0.15s;
+}
+
+
+label > * {
+  font-family: "NotoSans-SemiBold";
 }
 
 

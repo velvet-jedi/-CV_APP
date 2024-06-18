@@ -16,7 +16,7 @@
     height: 100%;
     width: 100%;
     bottom: 0px;
-
+    
 
 }
 
@@ -28,4 +28,19 @@
     color: var(--resume-accent);
     padding: 4px 0;
     border-radius: 2px;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.resume-section {
+    padding: 0 56px;
+    margin-top: 40px;
+  }
+
+
+  .resume h1,
+.resume h2,
+.resume h3 {
+  font-family: var(--resume-bold);
+  font-weight: bold;
 }

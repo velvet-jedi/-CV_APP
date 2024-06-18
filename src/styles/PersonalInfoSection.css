@@ -20,4 +20,5 @@
     background-color: var(--resume-accent);
     color: var(--header-resume-color);
     padding: 36px 24px;
+    width: 100%;
 }
