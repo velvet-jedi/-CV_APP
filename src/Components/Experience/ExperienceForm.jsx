@@ -12,6 +12,7 @@ const ExperienceForm = (props) => {
     <form 
         id={id}
         className="experience-form section-form"
+        data-array-name="experiences"
         onSubmit={(e) => e.preventDefault()}
     >
         <InputField 
@@ -21,6 +22,7 @@ const ExperienceForm = (props) => {
             placeholder='Enter Company Name'
             onChange={onChange}
             value={companyName}
+            data-key="companyName"
         />
 
         <InputField 
@@ -30,25 +32,29 @@ const ExperienceForm = (props) => {
             placeholder='Enter Position Title'
             onChange={onChange}
             value={position}
+            data-key="positionTitle"
         />
 
-        <InputField 
-            type="date"
-            id="date"
-            labelText="Start Date"
-            placeholder="Enter Start date"
-            value={startDate}
-            onChange={onChange}
-        />
-
-        <InputField 
-            type='date'
-            id='date'
-            labelText="End Date"
-            placeholder='Enter End Name'
-            value={endDate}
-            onChange={onChange}
-        />
+        <div className="dates-group">
+            <InputField
+                type="date"
+                id="date"
+                labelText="Start Date"
+                placeholder="Enter Start date"
+                value={startDate}
+                onChange={onChange}
+                data-key="startDate"
+            />
+            <InputField
+                type='date'
+                id='date'
+                labelText="End Date"
+                placeholder='Enter End Name'
+                value={endDate}
+                onChange={onChange}
+                data-key="endDate"
+            />
+        </div>
 
         <Buttons 
             save={save}
