@@ -95,9 +95,16 @@ function App() {
     });
   };
 
-  // const createExperienceForm = () => {
-
-  // }
+  const createExperienceForm = () => {
+    createForm("experiences", {
+      companyName: "",
+      positionTitle: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      id: uniqid(),
+    });
+  };
 
   const setOpen = (sectionName) => setSectionOpen(sectionName);
 
@@ -167,12 +174,11 @@ function App() {
             experiences={sections.experiences}
             isOpen={sectionOpen === "Experience"}
             onChange={handleSectionChange}
-            createForm={createEducationForm}
+            createForm={createExperienceForm}
             setOpen={setOpen}
             onCancel={cancelForm}
             onRemove={removeForm}
           />
-
         </div>
         <Resume personalInfo={personalInfo} sections={sections} />
       </div>

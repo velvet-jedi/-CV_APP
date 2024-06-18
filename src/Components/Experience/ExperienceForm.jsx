@@ -5,7 +5,7 @@ import InputField from "../InputField"
 
 const ExperienceForm = (props) => {
 
-    const {companyName='', position='', startDate='', endDate='', id=''} = props.form || {};
+    const {companyName='', positionTitle='', startDate='', endDate='', id='', description=''} = props.form || {};
     const { onChange, save, remove, cancel } = props; // for buttons
 
   return (
@@ -27,11 +27,11 @@ const ExperienceForm = (props) => {
 
         <InputField 
             type='text'
-            id='position'
+            id='position-title'
             labelText='Position Title'
             placeholder='Enter Position Title'
             onChange={onChange}
-            value={position}
+            value={positionTitle}
             data-key="positionTitle"
         />
 
@@ -55,6 +55,16 @@ const ExperienceForm = (props) => {
                 data-key="endDate"
             />
         </div>
+
+        <InputField 
+            type="textarea"
+            id="description"
+            labelText="Description"
+            placeholder="Enter Description"
+            value={description}
+            onChange={onChange}
+            data-key="description"
+        />
 
         <Buttons 
             save={save}
