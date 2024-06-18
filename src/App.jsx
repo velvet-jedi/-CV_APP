@@ -119,7 +119,7 @@ function App() {
 
 
   const cancelForm = (e) => {
-    console.log('cacelling from')
+    // console.log('cacelling from')
     // dont update the form state thats it
     // and if the form has no state already remove it from DOM
     if(prevState == null ) {
