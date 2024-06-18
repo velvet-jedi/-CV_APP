@@ -4,8 +4,9 @@ import PersonalDetails from "./Components/PII/PersonalDetails";
 import Resume from "./Components/Resume";
 import AddEducationSection from "./Components/Education/AddEducationSection";
 import uniqid from "uniqid";
+import AddExperienceSection from "./Components/Experience/AddExperienceSection";
 
-import "./styles/App.css"
+import "./styles/App.css";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -74,24 +75,23 @@ function App() {
     });
   }
 
-
-  // add a new form object to appropriate section 
-  function createForm(arrayName, object){
+  // add a new form object to appropriate section
+  function createForm(arrayName, object) {
     const section = structuredClone(sections[arrayName]);
-    setPrevState(null);  // start as new form with no previous state
-    
+    setPrevState(null); // start as new form with no previous state
+
     section.push(object);
-    setSections({...sections, [arrayName] : section});
+    setSections({ ...sections, [arrayName]: section });
   }
 
   // create a new form object
   const createEducationForm = () => {
     createForm("educations", {
-      degree:"",
-      schoolName:"",
-      startDate:"",
-      endDate:"",
-      id:uniqid()
+      degree: "",
+      schoolName: "",
+      startDate: "",
+      endDate: "",
+      id: uniqid(),
     });
   };
 
@@ -102,8 +102,7 @@ function App() {
   const setOpen = (sectionName) => setSectionOpen(sectionName);
 
   const removeForm = (e) => {
-    
-    const form = e.target.closest('.section-form') // find out the form which had its delete button clicked
+    const form = e.target.closest(".section-form"); // find out the form which had its delete button clicked
     const { id } = form; // get its id
     const { arrayName } = form.dataset;
 
@@ -113,25 +112,22 @@ function App() {
       ...sections,
       [arrayName]: section.filter((item) => item.id !== id),
     });
-
-  }
-
-
+  };
 
   const cancelForm = (e) => {
     // console.log('cacelling from')
     // dont update the form state thats it
     // and if the form has no state already remove it from DOM
-    if(prevState == null ) {
-      removeForm(e)
-      
+    if (prevState == null) {
+      removeForm(e);
+
       return;
     }
 
-    const sectionForm = e.target.closest('.section-form');
+    const sectionForm = e.target.closest(".section-form");
     const { id } = sectionForm;
     const { arrayName } = sectionForm.dataset;
-    const section = sections[arrayName]
+    const section = sections[arrayName];
 
     setSections({
       ...sections,
@@ -140,9 +136,9 @@ function App() {
           form = prevState;
         }
         return form;
-      })
-    })
-  }
+      }),
+    });
+  };
 
   return (
     <>
@@ -156,18 +152,28 @@ function App() {
               phoneNumber={personalInfo.phoneNumber}
             />
           </div>
+
+          <AddEducationSection
+            educations={sections.educations}
+            isOpen={sectionOpen === "Education"}
+            onChange={handleSectionChange}
+            createForm={createEducationForm}
+            setOpen={setOpen}
+            onCancel={cancelForm}
+            onRemove={removeForm}
+          />
+
+          <AddExperienceSection
+            experiences={sections.experiences}
+            isOpen={sectionOpen === "Experience"}
+            onChange={handleSectionChange}
+            createForm={createEducationForm}
+            setOpen={setOpen}
+            onCancel={cancelForm}
+            onRemove={removeForm}
+          />
+
         </div>
-
-        <AddEducationSection
-          educations={sections.educations}
-          isOpen={sectionOpen === "Education"}
-          onChange={handleSectionChange}
-          createForm={createEducationForm}
-          setOpen={setOpen}
-          onCancel={cancelForm}
-          onRemove={removeForm}
-        />
-
         <Resume personalInfo={personalInfo} sections={sections} />
       </div>
     </>
