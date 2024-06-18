@@ -5,6 +5,8 @@ import Resume from "./Components/Resume";
 import AddEducationSection from "./Components/Education/AddEducationSection";
 import uniqid from "uniqid";
 
+import "./styles/App.css"
+
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
     fullName: "",
