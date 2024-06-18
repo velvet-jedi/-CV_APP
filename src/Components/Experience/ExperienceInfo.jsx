@@ -5,7 +5,7 @@
 
 const ExperienceInfo = ({ info }) => {
 
-    const {startDate, endDate, companyName, positionTitle } = info;
+    const {startDate, endDate, companyName, positionTitle, description } = info;
 
 
   return (
@@ -21,6 +21,7 @@ const ExperienceInfo = ({ info }) => {
       <div className="experience-info-group">
         <p className="experience-info-companyName">{companyName}</p>
         <p className="experience-info-positionTitle">{positionTitle}</p>
+        <p className="experience-info-description">{description}</p>
       </div>
     </div>
   );
