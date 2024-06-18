@@ -4,7 +4,7 @@ import CreateForm from "../CreateForm";
 import ExperienceForm from "./ExperienceForm";
 import ExpandSection from "../ExpandSection";
 
-import { FaBriefcase } from "react-icons/fa"; // Ensure correct import
+import { FaBriefcase } from "react-icons/fa";
 
 
 const AddExperienceSection = ({
