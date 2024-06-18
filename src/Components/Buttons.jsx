@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */ 
-
+import "../styles/Buttons.css";
 import { FaTrash } from "react-icons/fa";
 
 const Buttons = ({remove, cancel, save}) => {
