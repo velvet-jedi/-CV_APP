@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 
 import { FaPlus } from "react-icons/fa6";
-// import "../styles/CreateForm.css";
+import "../styles/CreateForm.css";
 
 const CreateForm = ({ onClick, buttonText }) => {
   return (
     <button className="create-form" onClick={onClick}>
       <h4 className="button-content">
-        <FaPlus></FaPlus>
+        <FaPlus className="fa-plus"></FaPlus>
         {buttonText}
         </h4>
     </button>
