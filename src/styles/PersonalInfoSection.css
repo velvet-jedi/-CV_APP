@@ -1,0 +1,23 @@
+.resume-name  {
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    gap: 18px;
+}
+
+.contact-info > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.personal-info {
+    background-color: var(--resume-accent);
+    color: var(--header-resume-color);
+    padding: 36px 24px;
+}

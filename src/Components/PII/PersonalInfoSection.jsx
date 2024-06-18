@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-// import "../../styles/PersonalInfoSection.css";
+import "../../styles/PersonalInfoSection.css";
 
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 const PersonalInfoSection = ({ email, phoneNumber, fullName }) => {
