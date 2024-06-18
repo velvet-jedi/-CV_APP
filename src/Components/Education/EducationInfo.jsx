@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // reusable component for displaying education info in the education section of the resume
-// import '../../styles/EducationInfo.css';
+import '../../styles/EducationInfo.css';
 
 const EducationInfo = ({info}) => {
     const {schoolName, degree, startDate, endDate} = info;
