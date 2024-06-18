@@ -12,7 +12,6 @@ function App() {
     fullName: "",
     email: "",
     phoneNumber: "",
-    address: "",
   });
   const [sections, setSections] = useState({
     educations: [
@@ -20,7 +19,6 @@ function App() {
       {
         degree: "",
         schoolName: "",
-        location: "",
         startDate: "",
         endDate: "",
 
@@ -34,7 +32,6 @@ function App() {
       {
         companyName: "",
         positionTitle: "",
-        location: "",
         description: "",
         startDate: "",
         endDate: "",
@@ -98,8 +95,36 @@ function App() {
     });
   };
 
+  // const createExperienceForm = () => {
+
+  // }
+
   const setOpen = (sectionName) => setSectionOpen(sectionName);
 
+  const removeForm = (e) => {
+    const form = e.target.closest('.section-form') // find out the form which had its delete button clicked
+    const { id } = form; // get its id
+    const { arrayName } = form.dataset;
+
+    const section = sections[arrayName];
+
+    setSections({
+      ...sections,
+      [arrayName]: section.filter((item) => item.id !== id),
+    });
+
+  }
+
+
+
+  const cancelForm = (e) => {
+    // dont update the form state thats it
+    // and if the form has no state already remove it from DOM
+    if(prevState == null ) {
+      removeForm(e)
+      return;
+    }
+  }
 
   return (
     <>
@@ -121,8 +146,8 @@ function App() {
           onChange={handleSectionChange}
           createForm={createEducationForm}
           setOpen={setOpen}
-          // onCancel={cancelForm}
-          // onRemove={removeForm}
+          onCancel={cancelForm}
+          onRemove={removeForm}
         />
 
         <Resume personalInfo={personalInfo} sections={sections} />
