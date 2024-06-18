@@ -59,7 +59,7 @@ const EducationForm = (props) => { // props object
         />
       </div>
 
-    <Buttons save={save} remove={remove} cancle={cancel}></Buttons>
+    <Buttons save={save} remove={remove} cancel={cancel}></Buttons>
     </form>
   );
 };

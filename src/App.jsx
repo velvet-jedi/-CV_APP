@@ -102,6 +102,7 @@ function App() {
   const setOpen = (sectionName) => setSectionOpen(sectionName);
 
   const removeForm = (e) => {
+    
     const form = e.target.closest('.section-form') // find out the form which had its delete button clicked
     const { id } = form; // get its id
     const { arrayName } = form.dataset;
@@ -118,12 +119,29 @@ function App() {
 
 
   const cancelForm = (e) => {
+    console.log('cacelling from')
     // dont update the form state thats it
     // and if the form has no state already remove it from DOM
     if(prevState == null ) {
       removeForm(e)
+      
       return;
     }
+
+    const sectionForm = e.target.closest('.section-form');
+    const { id } = sectionForm;
+    const { arrayName } = sectionForm.dataset;
+    const section = sections[arrayName]
+
+    setSections({
+      ...sections,
+      [arrayName]: section.map((form) => {
+        if (form.id === id) {
+          form = prevState;
+        }
+        return form;
+      })
+    })
   }
 
   return (
