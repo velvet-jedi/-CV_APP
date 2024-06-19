@@ -158,7 +158,7 @@ function App() {
               email={personalInfo.email}
               phoneNumber={personalInfo.phoneNumber}
             />
-          </div>
+          
 
           <AddEducationSection
             educations={sections.educations}
@@ -179,6 +179,7 @@ function App() {
             onCancel={cancelForm}
             onRemove={removeForm}
           />
+        </div>
         </div>
         <Resume personalInfo={personalInfo} sections={sections} />
       </div>
