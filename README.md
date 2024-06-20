@@ -1,9 +1,7 @@
 # [Get your CV done]()
 
 
-- A section to add education (school name, title of study and date of study, ongoing or not)
-- - delete, cancel, update(save) button per entry
+- This section initially showed the specs, now what's allowed is only you to 
+# [try it out]()
 
-- - delete, cancel, update(save) button per entry
 
-- Save and download pdf button for the whole CV.
