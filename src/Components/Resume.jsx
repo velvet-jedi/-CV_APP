@@ -17,12 +17,14 @@ const Resume = ({ personalInfo, sections }) => {
               email={personalInfo.email}
               phoneNumber={personalInfo.phoneNumber}
           />
-          <EducationInfoSection
-              educations={sections.educations}
-          />
-          <ExperienceInfoSection
-              experiences={sections.experiences}
-          />
+          <div>
+            <EducationInfoSection
+                educations={sections.educations}
+            />
+            <ExperienceInfoSection
+                experiences={sections.experiences}
+            />
+          </div>
         </div>
     </div>
   )
