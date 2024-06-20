@@ -39,12 +39,13 @@ const AddEducationSection = ({
                 arrayName="educations"
                 titleKey="schoolName"
             />
-        </div>
+        
 
         <CreateForm 
             onClick={createForm}
             buttonText='Education'
         />
+        </div>
     </div>
   )
 }
