@@ -5,6 +5,7 @@ import Resume from "./Components/Resume";
 import AddEducationSection from "./Components/Education/AddEducationSection";
 import uniqid from "uniqid";
 import AddExperienceSection from "./Components/Experience/AddExperienceSection";
+import PdfSave from "./Components/PdfSave";
 
 import "./styles/App.css";
 
@@ -179,7 +180,11 @@ function App() {
     <>
       <div className="app">
         <div className="edit-side">
+          
           <div className="form-container">
+          <div className="save-cv">
+            <PdfSave />
+          </div>
             <PersonalDetails
               onChange={handlePersonalInfoChange}
               fullName={personalInfo.fullName}

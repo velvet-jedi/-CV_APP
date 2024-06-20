@@ -1,0 +1,30 @@
+.cv-download {
+    
+    
+    padding: 18px;
+    background-color: white;
+    border-radius: 12px;
+    
+    font-family: 'NotoSans-Bold';
+    
+}
+
+.inner {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+.download-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    scale: 1.3;
+
+
+}
