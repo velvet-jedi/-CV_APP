@@ -4,7 +4,7 @@
 const DisplaySection = ({ array, InfoComponent, title }) => {
   const hasNonEmptyValues = (obj) => {
     // do any of the objects in the array contain non-empty values for their properties
-    return Object.values(obj).some(value => value !== '');
+    return Object.entries(obj).some(([key, value]) => key!=='id' && value !== '');
   }
 
 
