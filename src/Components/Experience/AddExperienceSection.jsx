@@ -14,6 +14,7 @@ const AddExperienceSection = ({
   setOpen,
   onCancel,
   onRemove,
+  toggleCollapsed
 }) => {
   return (
     <div className="add-experience-section section">
@@ -34,6 +35,7 @@ const AddExperienceSection = ({
           FormComponent={ExperienceForm} // this will provide the input fields for the form
           arrayName="experiences"
           titleKey="companyName"
+          toggleCollapsed={toggleCollapsed}
         />
 
         <CreateForm onClick={createForm} buttonText="Experience" />

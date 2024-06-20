@@ -16,8 +16,8 @@ const AddEducationSection = ({
     createForm,
     setOpen,
     onCancel,
-    onRemove
-
+    onRemove,
+    toggleCollapsed
 }) => {
   return (
     <div className="add-education-section section">
@@ -38,6 +38,7 @@ const AddEducationSection = ({
                 FormComponent={EducationForm} // this will provide the input fields for the form
                 arrayName="educations"
                 titleKey="schoolName"
+                toggleCollapsed={toggleCollapsed}
             />
         
 
