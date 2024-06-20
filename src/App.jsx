@@ -92,6 +92,7 @@ function App() {
       startDate: "",
       endDate: "",
       id: uniqid(),
+      isCollapsed: false
     });
   };
 
@@ -103,6 +104,7 @@ function App() {
       endDate: "",
       description: "",
       id: uniqid(),
+      isCollapsed: false
     });
   };
 
