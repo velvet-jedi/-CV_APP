@@ -22,6 +22,7 @@ const DisplayForms = ({ forms, onChange, onCancel, onRemove, FormComponent, arra
                 cancel={onCancel}
                 remove={onRemove}
                 arrayName={arrayName}
+                save={toggleCollapsed}
                 title={form[titleKey]} // iterates over the
                 // forms array, value of the title prop is set to form[titleKey], title will be dynamically retrieved from the form object based on the property specified by the titleKey prop
             />
