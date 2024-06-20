@@ -26,6 +26,7 @@ const EducationForm = (props) => { // props object
         onChange={onChange}
         value={schoolName} // used in handleSectionChange to destructure 'value' from the dataset object
         data-key="schoolName" // used in handleSectionChange to destructure 'key' from the dataset object
+        required
       />
 
       <InputField
@@ -36,6 +37,7 @@ const EducationForm = (props) => { // props object
         value={degree}
         onChange={onChange}
         data-key="degree"
+        required
       />
 
       <div className="dates-group">
@@ -47,6 +49,7 @@ const EducationForm = (props) => { // props object
           value={startDate}
           onChange={onChange}
           data-key="startDate"
+          required
         />
         <InputField
           type="date"
@@ -56,6 +59,7 @@ const EducationForm = (props) => { // props object
           value={endDate}
           onChange={onChange}
           data-key="endDate"
+          required
         />
       </div>
 

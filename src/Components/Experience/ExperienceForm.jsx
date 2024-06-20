@@ -33,6 +33,7 @@ const ExperienceForm = (props) => {
             onChange={onChange}
             value={positionTitle}
             data-key="positionTitle"
+            required
         />
 
         <div className="dates-group">
@@ -44,6 +45,7 @@ const ExperienceForm = (props) => {
                 value={startDate}
                 onChange={onChange}
                 data-key="startDate"
+                required
             />
             <InputField
                 type='date'
@@ -53,6 +55,7 @@ const ExperienceForm = (props) => {
                 value={endDate}
                 onChange={onChange}
                 data-key="endDate"
+                required
             />
         </div>
 
@@ -64,6 +67,7 @@ const ExperienceForm = (props) => {
             value={description}
             onChange={onChange}
             data-key="description"
+            required
         />
 
         <Buttons 
