@@ -149,6 +149,32 @@ function App() {
     });
   };
 
+  function toggleValue (e, key) {
+    const sectionForm = e.target.closest('.section-form');
+    const {id} = sectionForm;
+    const {arrayName} = sectionForm.dataset;
+    const section = sections[arrayName];
+    
+    setSections({
+      ...sections,
+      [arrayName]: section.map((form) => {
+        if(form.id === id){
+
+          // copy the values of all enumerable properties from one or more source objects to a target object
+          // create a shallow copy of current original form object and set it as prevstate
+          setPrevState(Object.assign({}, form))  // set the current state as previous state in case the form gets cancelled
+          form[key] = !form[key];   // toggling the isCollapsed
+        }
+        return form;
+      })
+    })
+
+  }
+
+  const toggleCollapsed = (e) => toggleValue(e, "isCollapsed");
+
+
+
   return (
     <>
       <div className="app">
@@ -170,6 +196,7 @@ function App() {
             setOpen={setOpen}
             onCancel={cancelForm}
             onRemove={removeForm}
+            toggleCollapsed={toggleCollapsed}
           />
 
           <AddExperienceSection
@@ -180,6 +207,7 @@ function App() {
             setOpen={setOpen}
             onCancel={cancelForm}
             onRemove={removeForm}
+            toggleCollapsed={toggleCollapsed}
           />
         </div>
         </div>
