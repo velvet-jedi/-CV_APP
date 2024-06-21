@@ -93,7 +93,7 @@ function App() {
       startDate: "",
       endDate: "",
       id: uniqid(),
-      isCollapsed: false
+      isCollapsed: false,
     });
   };
 
@@ -105,7 +105,7 @@ function App() {
       endDate: "",
       description: "",
       id: uniqid(),
-      isCollapsed: false
+      isCollapsed: false,
     });
   };
 
@@ -150,71 +150,65 @@ function App() {
     });
   };
 
-  function toggleValue (e, key) {
-    const sectionForm = e.target.closest('.section-form');
-    const {id} = sectionForm;
-    const {arrayName} = sectionForm.dataset;
+  function toggleValue(e, key) {
+    const sectionForm = e.target.closest(".section-form");
+    const { id } = sectionForm;
+    const { arrayName } = sectionForm.dataset;
     const section = sections[arrayName];
-    
+
     setSections({
       ...sections,
       [arrayName]: section.map((form) => {
-        if(form.id === id){
-
+        if (form.id === id) {
           // copy the values of all enumerable properties from one or more source objects to a target object
           // create a shallow copy of current original form object and set it as prevstate
-          setPrevState(Object.assign({}, form))  // set the current state as previous state in case the form gets cancelled
-          form[key] = !form[key];   // toggling the isCollapsed
+          setPrevState(Object.assign({}, form)); // set the current state as previous state in case the form gets cancelled
+          form[key] = !form[key]; // toggling the isCollapsed
         }
         return form;
-      })
-    })
-
+      }),
+    });
   }
 
   const toggleCollapsed = (e) => toggleValue(e, "isCollapsed");
-
-
 
   return (
     <>
       <div className="app">
         <div className="edit-side">
-          
           <div className="form-container">
-          <div className="save-cv">
-            <PdfSave />
-          </div>
+            <div className="save-cv">
+              <PdfSave personalInfo={personalInfo} sections={sections}/>
+            </div>
             <PersonalDetails
               onChange={handlePersonalInfoChange}
               fullName={personalInfo.fullName}
               email={personalInfo.email}
               phoneNumber={personalInfo.phoneNumber}
             />
-          
 
-          <AddEducationSection
-            educations={sections.educations}
-            isOpen={sectionOpen === "Education"}
-            onChange={handleSectionChange}
-            createForm={createEducationForm}
-            setOpen={setOpen}
-            onCancel={cancelForm}
-            onRemove={removeForm}
-            toggleCollapsed={toggleCollapsed}
-          />
+            <AddEducationSection
+              educations={sections.educations}
+              isOpen={sectionOpen === "Education"}
+              onChange={handleSectionChange}
+              createForm={createEducationForm}
+              setOpen={setOpen}
+              onCancel={cancelForm}
+              onRemove={removeForm}
+              toggleCollapsed={toggleCollapsed}
+            />
 
-          <AddExperienceSection
-            experiences={sections.experiences}
-            isOpen={sectionOpen === "Experience"}
-            onChange={handleSectionChange}
-            createForm={createExperienceForm}
-            setOpen={setOpen}
-            onCancel={cancelForm}
-            onRemove={removeForm}
-            toggleCollapsed={toggleCollapsed}
-          />
-        </div>
+            <AddExperienceSection
+              experiences={sections.experiences}
+              isOpen={sectionOpen === "Experience"}
+              onChange={handleSectionChange}
+              createForm={createExperienceForm}
+              setOpen={setOpen}
+              onCancel={cancelForm}
+              onRemove={removeForm}
+              toggleCollapsed={toggleCollapsed}
+            />
+          </div>
         </div>
         <Resume personalInfo={personalInfo} sections={sections} />
       </div>

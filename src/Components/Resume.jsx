@@ -3,14 +3,17 @@
 
 import '../styles/Resume.css';
 
+import React from 'react';
+
 import PersonalInfoSection from "./PII/PersonalInfoSection"
 import EducationInfoSection from "./Education/EducationInfoSection"
 import ExperienceInfoSection from "./Experience/ExperienceInfoSection"
 
-const Resume = ({ personalInfo, sections }) => {
+
+const Resume = React.forwardRef(({ personalInfo, sections }, ref) => {
   return (
-    <div className="resume-container">
-        <div className="resume">
+    <div className="resume-container" ref={ref}>
+        <div id="resume">
           
           <PersonalInfoSection
               fullName={personalInfo.fullName}
@@ -28,6 +31,8 @@ const Resume = ({ personalInfo, sections }) => {
         </div>
     </div>
   )
-}
+});
+
+Resume.displayName = 'Resume';
 
 export default Resume
