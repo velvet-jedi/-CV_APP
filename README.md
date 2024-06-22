@@ -7,4 +7,4 @@
 
 
 
-![Preview](../../../Pictures/CV-app.png)
+![alt text](image.png)
