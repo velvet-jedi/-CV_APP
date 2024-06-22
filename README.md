@@ -6,3 +6,5 @@
 ### [try it out](https://cv-app-dusky.vercel.app/)
 
 
+
+![Preview](../../../Pictures/CV-app.png)
